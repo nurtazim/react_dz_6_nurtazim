@@ -14,6 +14,53 @@ class Counter extends React.Component {
             }
         })
     }
+    DeCreate = () => {
+        this.setState((oldState) => {
+            return {
+                count: oldState.count - 1
+            }
+        })
+    }
+
+    UNSAFE_componentWillMount() {
+        console.log("WillMount new version")
+    }
+
+    componentWillMount() {
+        console.log("WillMount")
+    };
+
+    componentDidMount() {
+        console.log("DidMount")
+    };
+
+    componentWillUnmount() {
+        console.log("WillUnmount")
+    }
+     UNSAFE_componentWillUpdate() {
+        console.log("WillUpdate new version")
+    }
+
+    componentWilUpdate() {
+        console.log("WilUpdate")
+    }
+
+    componentDidUpdate() {
+        console.log("DidUpdate")
+    }
+
+    componentDidCatch() {
+        console.log("Проверка на ошибки")
+    }
+
+
+    UNSAFE_componentWillReceiveProps() {
+        console.log("WillReceiveProps")
+    }
+
+    componentWillReceiveProps() {
+        console.log("WillReceiveProps")
+    }
 
 
     render() {
